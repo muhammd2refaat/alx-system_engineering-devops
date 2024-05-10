@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Listens on port 98 on localhost.
+# Pings localhost 98 times.
+# This works with nc (Netcat)
+
+nc -l localhost 98
