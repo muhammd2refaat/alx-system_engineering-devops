@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# 0x07-networking_basics/4-TCP_and_UDP_ports works with TCP and UDP ports on the machine it’s executed on and all network connections.
+netstat -l --program
