@@ -1,19 +1,6 @@
 #!/usr/bin/env bash
 # transfer a file from our server to another server
-#
-# This script is used to transfer a file to a remote server.
-# It takes the file path and the remote server IP address as command line arguments.
-# The script uses the `scp` command to securely copy the file to the remote server.
-# It assumes that the user has the necessary permissions to access the file and the remote server.
-# The script displays a success message if the file transfer is successful, or an error message otherwise.
-#
-# Usage: transfer_file.sh <file_path> <remote_server_ip>
-#
-# Example: transfer_file.sh /path/to/file.txt 192.168.0.100
-#
-# Note: Make sure to replace <file_path> with the actual path of the file you want to transfer,
-# and <remote_server_ip> with the IP address of the remote server.
-# 
+
 if [ $# -lt 3 ];
 then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY";
