@@ -39,4 +39,4 @@
 
 ## Bonus: A Diagram to Visualize the Chaos
 
-![Memory Leak Debugging Process](https://assets.digitalocean.com/articles/eng_guides/debugging_postmortem/memory-leak-debugging-process.png)
+![Memory Leak Debugging Process](https://raw.githubusercontent.com/muhammd2refaat/alx-system_engineering-devops/master/0x19-postmortem/image/DALL%C2%B7E%202024-08-18%2018.42.41%20-%20A%20diagram%20illustrating%20the%20process%20of%20identifying%20and%20fixing%20a%20memory%20leak%20in%20a%20web%20server.%20The%20diagram%20includes%20four%20main%20stages%20connected%20by%20arrows_.webp)
