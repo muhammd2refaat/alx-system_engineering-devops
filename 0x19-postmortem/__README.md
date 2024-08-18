@@ -39,5 +39,5 @@
 
 ## Bonus: A Diagram to Visualize the Chaos
 
-![Memory Leak Debugging Process](path_to_diagram_image)
+![Memory Leak Debugging Process](https://github.com/muhammd2refaat/alx-system_engineering-devops/blob/master/0x19-postmortem/path_to_diagram_image)
 
