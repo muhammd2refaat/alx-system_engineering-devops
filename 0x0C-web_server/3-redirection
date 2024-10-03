@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
-# Configure Nginx server so that /redirect_me is redirecting to another page.
-# But the main domain still shows Hello world
+# Bash script that configures a new Ubuntu machine to respect the requirements
 
-apt-get update -y && apt-get upgrade -y
-apt-get install nginx -y
-chown -R "$USER":"$USER" /var/www/html
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-line="\\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
-sed -i "48i $line" /etc/nginx/sites-available/default
-service nginx restart
+# Update package index
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get -y install nginx
+
+# Allow Nginx through firewall
+sudo ufw allow 'Nginx HTTP'
+
+# Create index.html with "Hello World!"
+echo 'Hello World!' | sudo tee /var/www/html/index.html > /dev/null
+
+# Configure nginx to redirect /redirect_me to YouTube video
+sudo sed -i '/^}/i \ \ \ \ location /redirect_me {\n \ \ \ \ \ \ \ \ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n \ \ \ \ }' /etc/nginx/sites-available/default
+
+# Restart Nginx
+sudo service nginx restart
